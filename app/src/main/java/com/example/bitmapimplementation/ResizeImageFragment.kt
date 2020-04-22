@@ -59,10 +59,12 @@ class ResizeImageFragment : Fragment() {
                     "Enter height",
                     Toast.LENGTH_SHORT
                 ).show()
-                else -> resize(
-                    widthText.text.toString().trim().toInt(),
-                    heightText.text.toString().trim().toInt()
-                )
+                else -> {
+                    resize(
+                        widthText.text.toString().trim().toInt(),
+                        heightText.text.toString().trim().toInt()
+                    )
+                }
             }
         }
         return rootView

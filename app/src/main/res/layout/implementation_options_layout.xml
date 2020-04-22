@@ -3,22 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondaryLightColor"
+        android:gravity="center"
+        android:text="@string/choose_the_implementation_method"
+        android:textSize="20sp"
+        android:padding="20dp"/>
 
     <Button
         android:id="@+id/api"
-        style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/using_android_api" />
+        android:background="#FFFFFF"
+        android:text="@string/using_android_api"
+        android:theme="@style/Widget.AppCompat.Button.Borderless" />
 
     <Button
         android:id="@+id/glide"
-        style="@style/buttonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/using_glide" />
+        android:background="#FFFFFF"
+        android:text="@string/using_glide"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        android:paddingEnd="10dp"/>
 
 </LinearLayout>

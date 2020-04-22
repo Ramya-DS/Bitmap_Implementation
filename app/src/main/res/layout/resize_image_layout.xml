@@ -14,21 +14,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:scrollbars="vertical"
             android:padding="20dp"
+            android:scrollbars="vertical"
             android:src="@drawable/ic_android_black_24dp" />
 
         <EditText
             android:id="@+id/width"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_the_desired_width" />
+            android:hint="@string/enter_the_desired_width"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_the_desired_height"
+            android:inputType="number"
             android:padding="10dp" />
 
         <Button

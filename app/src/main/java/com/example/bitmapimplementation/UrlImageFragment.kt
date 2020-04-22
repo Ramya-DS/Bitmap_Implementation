@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.URLUtil
 import android.widget.*
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import java.lang.Exception
 import java.lang.ref.WeakReference
 
 /**
@@ -60,14 +62,19 @@ class UrlImageFragment : Fragment() {
     }
 
     private fun getImage(url: String) {
-        if (isGlide) {
-            Glide.with(context!!)
-                .load(url)
-                .placeholder(resources.getDrawable(R.drawable.ic_android_black_24dp))
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(imageView)
+        if (URLUtil.isValidUrl(url)) {
+            if (isGlide) {
+                Glide.with(context!!)
+                    .load(url)
+                    .placeholder(resources.getDrawable(R.drawable.ic_android_black_24dp))
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .into(imageView)
+            } else {
+                DownloadImage(WeakReference(imageView)).execute(url)
+            }
         } else {
-            DownloadImage(WeakReference(imageView)).execute(url)
+            Toast.makeText(context!!, "Invalid URL", Toast.LENGTH_SHORT).show()
         }
+
     }
 }
