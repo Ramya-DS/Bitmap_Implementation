@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bitmap Implementation</string>
+    <string name="using_android_api">USING ANDROID API</string>
+    <string name="using_glide">USING GLIDE</string>
+    <string name="load_image_from_storage">LOAD IMAGE FROM STORAGE</string>
+    <string name="load_image_from_URL">LOAD IMAGE FROM URL</string>
+    <string name="pick_a_image">PICK A IMAGE</string>
+    <string name="enter_the_image_url">Enter the Image URL</string>
+    <string name="enter_the_desired_width">Desired Width</string>
+    <string name="enter_the_desired_height">Desired Height</string>
+    <string name="resize_an_image">RESIZE AN IMAGE</string>
+    <string name="resize">RESIZE</string>
+    <string name="fetch_the_image">FETCH THE IMAGE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
